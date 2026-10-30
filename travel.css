@@ -1,0 +1,413 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f4f7fb;
+    color: #222;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+header {
+    width: 100%;
+    padding: 20px 50px;
+    background: #5ea2de;
+    color: #ece7e7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header .background {
+    display: flex;
+    flex-direction: column;
+}
+
+header h1 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+header h6 {
+    font-size: 14px;
+    font-weight: 300;
+    opacity: 0.8;
+}
+
+.main-nav {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.main-nav li {
+    position: relative;
+}
+
+nav a {
+    color: rgb(46, 129, 162);
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    opacity: 0.7;
+}
+
+
+.nav-details summary {
+    cursor: pointer;
+    list-style: none;
+    font-weight: 500;
+}
+
+.dropdown {
+    position: absolute;
+    background: white;
+    padding: 10px;
+    border-radius: 6px;
+    margin-top: 8px;
+}
+
+
+.header-btn {
+    background: #39C4C0;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.header-btn:hover {
+    background: #126365;
+}
+
+
+#themeToggle {
+    background: linear-gradient(135deg, #39C4C0, #2a9da0);
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 
+        transform 0.2s ease,
+        box-shadow 0.3s ease,
+        opacity 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+#themeToggle:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+#themeToggle:active {
+    transform: scale(0.95);
+}
+
+
+.hero {
+    height: 400px;
+    padding: 120px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url("photos/plane.jpg") center/cover no-repeat;
+    color: #100000;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+.hero-btn {
+    margin-top: 20px;
+    display: inline-block;
+    background: #39C4C0;
+    padding: 12px 28px;
+    border-radius: 8px;
+    color: #faf8fa;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    background: #2a9da0;
+}
+
+
+section {
+    padding: 80px 50px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color:cadetblue;
+    background-color: #003A6C;
+}
+
+
+#about {
+    background-color: #d0f5f5;
+}
+
+.about-list {
+    list-style: none;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #003A6C;
+}
+
+.about-list li {
+    position: relative;
+    padding-left: 40px;
+}
+
+.about-list li::before {
+    content: "🌍";
+    margin-right: 10px;
+}
+
+.about-list li:nth-of-type(odd) {
+    background-color: #6db1ed;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+#about.highlight {
+    background-color: #fff3cd;
+    border: 2px solid orange;
+}
+
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.card {
+    position: relative;
+    background: white;
+    width: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.4s;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    background-color: #1160a5;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.18);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card::before {
+    content: "★";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: gold;
+}
+
+
+#gallery .card {
+    box-shadow: 0 8px 20px rgba(0,200,120,0.5);
+}
+
+#offers .card {
+    box-shadow: 0 8px 20px rgba(160,100,255,0.5);
+}
+
+
+@keyframes neonColors {
+    0% { box-shadow: 0 0 20px #00eaff; }
+    50% { box-shadow: 0 0 20px #39ff14; }
+    100% { box-shadow: 0 0 20px #00eaff; }
+}
+
+.neon-card {
+    border: 3px solid #00eaff;
+    border-radius: 50px;
+    animation: neonColors 8s infinite linear;
+}
+
+
+form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form input,
+form textarea {
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    padding: 12px;
+    background: #39C4C0;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+#loginSection {
+    margin: 60px auto;
+    padding: 30px;
+    max-width: 400px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+#usernameInput {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+#loginBtn {
+    margin-top: 15px;
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #5ea2de, #3b688f);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+#loginBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+#welcomeMsg {
+    margin-top: 15px;
+    font-weight: 600;
+    color: #39C4C0;
+}
+
+
+.controls {
+    margin: 30px auto;
+    display: grid;
+    justify-content: center;
+    gap: 20px;
+}
+
+.controls input {
+    padding: 8px;
+    font-size: 16px;
+}
+
+
+footer {
+    margin-top: 60px;
+    padding: 30px;
+    background: #003A6C;
+    color: white;
+    text-align: center;
+}
+
+
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+.dark-mode header {
+    background: #111;
+}
+
+.dark-mode .card {
+    background: #1e1e1e;
+}
+
+.dark-mode figcaption {
+    color: #ccc;
+}
+
+.dark-mode #loginSection {
+    background: #1e1e1e;
+    color: white;
+}
+
+.dark-mode #usernameInput {
+    background: #333;
+    color: white;
+    border: 1px solid #555;
+}
+
+
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+    outline: 3px solid #ffae00;
+    outline-offset: 2px;
+}
+
+
+@media (max-width: 600px) {
+    .about-list li {
+        font-size: 16px;
+    }
+}
+
+
+input.error, textarea.error {
+    border: 2px solid red !important;
+}

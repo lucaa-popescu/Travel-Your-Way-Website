@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Paris",
+    "price": 399,
+    "nights": 5
+  },
+  {
+    "name": "Bali",
+    "price": 699,
+    "nights": 7
+  },
+  {
+    "name": "Tokyo",
+    "price": 899,
+    "nights": 6
+  }
+]

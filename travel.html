@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Travel Your Way</title>
+
+    <link rel="icon" type="image/x-icon" href="photos/plane.jpg">
+
+    <link rel="stylesheet" href="travel.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="background">
+        <h1>Travel Your Way</h1>
+        <h6>Every story tells a journey</h6>
+    </div>
+
+    <nav>
+        <ul class="main-nav">
+
+            <li><a href="#home">Home</a></li>
+
+            <li>
+                <details class="nav-details">
+                    <summary>Destinations ▾</summary>
+                    <ul class="dropdown">
+                        <li><a href="#paris">Paris</a></li>
+                        <li><a href="#bali">Bali</a></li>
+                        <li><a href="#tokyo">Tokyo</a></li>
+                    </ul>
+                </details>
+            </li>
+
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#offers">Offers</a></li>
+            <li><a href="#contact">Contact</a></li>
+
+        </ul>
+    </nav>
+
+    <button id="themeToggle" aria-label="Change theme">Change Theme</button>
+    <a href="#offers" class="header-btn">Book Now</a>
+
+</header>
+
+<section id="loginSection">
+    <h2>Login</h2>
+
+    <input type="text" id="usernameInput" placeholder="Username">
+    <button id="loginBtn">Login</button>
+    <button id="logoutBtn" style="display:none;">Logout</button>
+
+    <p id="welcomeMsg"></p>
+</section>
+
+<section id="home" class="hero">
+    <h2>Discover The World With Us</h2>
+    <p>Choose your destination and start your story today.</p>
+    <a class="hero-btn" href="#destinations">Explore Destinations</a>
+</section>
+
+<section id="about" class="about">
+    <h2>About Us</h2>
+
+    <p>We are Travel Your Way, the agency that turns your travel dreams into reality.</p>
+
+    <ul class="about-list">
+        <li>Our slogan is simple: "Every journey tells a story."</li>
+        <li>We organize custom trips, not standard packages.</li>
+        <li>Flights, accommodation, transport and activities included.</li>
+    </ul>
+
+    <p>We put your story first.</p>
+</section>
+
+<section id="destinations" class="preview">
+    <h2>Popular Destinations</h2>
+
+    <div class="cards">
+
+        <div class="card neon-card" id="paris">
+            <figure>
+                <img src="photos/paris.jpg" alt="Paris">
+                <figcaption>Paris – The City of Love</figcaption>
+            </figure>
+        </div>
+
+        <div class="card neon-card" id="bali">
+            <figure>
+                <img src="photos/bali.jpg" alt="Bali">
+                <figcaption>Bali – Tropical paradise</figcaption>
+            </figure>
+        </div>
+
+        <div class="card neon-card" id="tokyo">
+            <figure>
+                <img src="photos/tokyo.jpg" alt="Tokyo">
+                <figcaption>Tokyo – Modern & traditional</figcaption>
+            </figure>
+        </div>
+
+    </div>
+</section>
+
+<section id="gallery" class="gallery">
+    <h2>Gallery</h2>
+
+    <div class="cards">
+
+        <figure class="card">
+            <img src="photos/travelers.jpg" alt="Travelers">
+            <figcaption>Travelers enjoying a view</figcaption>
+        </figure>
+
+        <figure class="card">
+            <img src="photos/mountain.jpg" alt="Mountain">
+            <figcaption>Mountain landscape</figcaption>
+        </figure>
+
+        <figure class="card">
+            <img src="photos/sunset.jpg" alt="Sunset">
+            <figcaption>Beach sunset</figcaption>
+        </figure>
+
+    </div>
+</section>
+
+<section id="offers" class="offers">
+    <h2>Special Offers</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <figure>
+                <img src="photos/greece.jpg" alt="Greece">
+                <figcaption>Greece – €499 / 7 nights</figcaption>
+            </figure>
+        </div>
+
+        <div class="card">
+            <figure>
+                <img src="photos/paris2.jpg" alt="Paris">
+                <figcaption>Paris – €399 / 5 nights</figcaption>
+            </figure>
+        </div>
+
+    </div>
+
+    <div class="controls">
+        <input type="text" id="searchInput" placeholder="Search destination...">
+
+        <label>
+            Photo size:
+            <input type="range" id="sizeRange" min="250" max="400" value="300">
+        </label>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Contact Us</h2>
+
+    <form id="contactForm" method="post">
+        <input type="text" id="name" placeholder="Your Name">
+        <input type="email" id="email" placeholder="Your Email">
+        <textarea id="message" placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<h3>Saved messages</h3>
+<ul id="messagesList"></ul>
+
+<section id="ajaxSection">
+    <h2>JSON destinations (AJAX)</h2>
+    <div id="ajaxResults" class="cards"></div>
+</section>
+
+<canvas id="statsCanvas" width="400" height="200"></canvas>
+
+<footer>
+    <p>© 2025 Travel Your Way — All rights reserved.</p>
+    <p>Popescu Christian Luca Alexandru</p>
+</footer>
+
+<script src="travel.js"></script>
+
+</body>
+</html>
